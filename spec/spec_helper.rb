@@ -1,6 +1,11 @@
 # frozen_string_literal: true
 
-require 'pagy/govuk'
+require 'rspec-html-matchers'
+require 'support/fixture_database'
+require 'rack'
+require 'pagy'
+require 'pagy/extras/govuk'
+Pagy::GovukExtra.add_default_i18n_load_path
 
 RSpec.configure do |config|
   # Enable flags like --only-failures and --next-failure

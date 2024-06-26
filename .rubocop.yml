@@ -1,13 +1,42 @@
 AllCops:
   TargetRubyVersion: 3.2
+  NewCops: enable
+  SuggestExtensions: false
+
+Metrics/BlockLength:
+  Exclude:
+    - spec/**/*
+
+Metrics/MethodLength:
+  Exclude:
+    - 'lib/pagy/extras/govuk.rb'
+    - 'spec/support/fixture_database.rb'
+
+Style/FrozenStringLiteralComment:
+  Enabled: false
 
 Style/StringLiterals:
-  Enabled: true
-  EnforcedStyle: single_quotes
+  Enabled: false
 
 Style/StringLiteralsInInterpolation:
   Enabled: true
   EnforcedStyle: double_quotes
+  Exclude:
+    - 'lib/pagy/extras/govuk.rb'
 
 Layout/LineLength:
   Max: 120
+  Exclude:
+    - 'lib/pagy/extras/govuk.rb'
+
+Layout/HashAlignment:
+  Exclude:
+    - 'lib/pagy/extras/govuk.rb'
+
+Layout/ArgumentAlignment:
+  Exclude:
+    - 'lib/pagy/extras/govuk.rb'
+
+Naming/MethodParameterName:
+  Exclude:
+    - 'lib/pagy/extras/govuk.rb'

@@ -5,7 +5,9 @@ that already serves Bootstrap, Bulma et al
 
 ## Installation
 
-`gem install pagy-govuk`
+```
+gem install pagy-govuk
+```
 
 ## Usage
 

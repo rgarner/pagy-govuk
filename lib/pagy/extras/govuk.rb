@@ -9,7 +9,7 @@ class Pagy # :nodoc:
   module GovukExtra
     # Add default English translations to the I18n load_path. Copy the keys if you don't need this
     def self.add_default_i18n_load_path
-      ::I18n.load_path << Dir[File.join(File.dirname(__FILE__), '../../../config/locales', '**', '*.{rb,yml}')]
+      ::I18n.load_path += Dir[File.join(File.dirname(__FILE__), '../../../config/locales', '**', '*.{rb,yml}')]
     end
 
     # Pagination for GOV.UK adapted from Pagy's Bootstrap: it returns the html with the series of links to the pages

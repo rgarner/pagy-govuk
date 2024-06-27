@@ -1,24 +1,26 @@
-# Pagy::Govuk
+# Pagy::GovukExtra
 
-TODO: Delete this and the text below, and describe your gem
-
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/pagy/govuk`. To experiment with that code, run `bin/console` for an interactive prompt.
+Provides a `pagy_govuk_nav` method that is a drop-in replacement for `pagy_nav`, using the same Pagy "extras" pattern
+that already serves Bootstrap, Bulma et al
 
 ## Installation
 
-TODO: Replace `UPDATE_WITH_YOUR_GEM_NAME_IMMEDIATELY_AFTER_RELEASE_TO_RUBYGEMS_ORG` with your gem name right after releasing it to RubyGems.org. Please do not do it earlier due to security reasons. Alternatively, replace this section with instructions to install your gem from git if you don't plan to release to RubyGems.org.
-
-Install the gem and add to the application's Gemfile by executing:
-
-    $ bundle add UPDATE_WITH_YOUR_GEM_NAME_IMMEDIATELY_AFTER_RELEASE_TO_RUBYGEMS_ORG
-
-If bundler is not being used to manage dependencies, install the gem by executing:
-
-    $ gem install UPDATE_WITH_YOUR_GEM_NAME_IMMEDIATELY_AFTER_RELEASE_TO_RUBYGEMS_ORG
+`gem install pagy-govuk`
 
 ## Usage
 
-TODO: Write usage instructions here
+```ruby
+  # in your setup, e.g. config/initializers/pagy.rb for a Rails app
+  require 'pagy/extras/govuk'
+  
+  # in your controller, assign a pagy instance as normal
+  def index
+    @pagy, @posts = pagy(BlogPost.all, items: 10)
+  end
+
+  # in your view
+  <%= pagy_govuk_nav(@pagy).html_safe %>
+```
 
 ## Development
 

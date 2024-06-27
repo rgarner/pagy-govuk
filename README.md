@@ -12,7 +12,10 @@ that already serves Bootstrap, Bulma et al
 ```ruby
   # in your setup, e.g. config/initializers/pagy.rb for a Rails app
   require 'pagy/extras/govuk'
-  
+  # Adds default GOV.UK SVG arrows and aria labels. 
+  # Override these pagy keys using this gem's en.yml as a template.
+  Pagy::GovukExtra.add_default_i18n_load_path 
+
   # in your controller, assign a pagy instance as normal
   def index
     @pagy, @posts = pagy(BlogPost.all, items: 10)

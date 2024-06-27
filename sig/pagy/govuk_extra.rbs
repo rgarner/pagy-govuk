@@ -1,0 +1,7 @@
+module Pagy
+  module GovukExtra
+    def self.add_default_i18n_load_path: -> untyped
+
+    def pagy_govuk_nav: -> untyped
+  end
+end
